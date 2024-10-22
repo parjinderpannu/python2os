@@ -1,0 +1,37 @@
+jyoti@jyoti-ThinkPad-T430:~/code/python2os/linux_cmd$ cat message.txt 
+Learn Linux TV has recently reached 300,000 subscribers! Wow!jyoti@jyoti-ThinkPad-T430:~/code/python2os/linux_cmd$ 
+jyoti@jyoti-ThinkPad-T430:~/code/python2os/linux_cmd$ cut -b 7,8,9,10,11 message.txt 
+Linux
+jyoti@jyoti-ThinkPad-T430:~/code/python2os/linux_cmd$ cut -b 7-11 message.txt 
+Linux
+jyoti@jyoti-ThinkPad-T430:~/code/python2os/linux_cmd$ cut -c 7-11 message.txt 
+Linux
+jyoti@jyoti-ThinkPad-T430:~/code/python2os/linux_cmd$ cut -b 7-11,56,57-61 message.txt 
+Linux! Wow!
+jyoti@jyoti-ThinkPad-T430:~/code/python2os/linux_cmd$ cut -f 1,2 message.txt 
+Learn Linux TV has recently reached 300,000 subscribers! Wow!
+jyoti@jyoti-ThinkPad-T430:~/code/python2os/linux_cmd$ cut -d " " -f 1,2 message.txt 
+Learn Linux
+
+jyoti@jyoti-ThinkPad-T430:~/code/python2os/linux_cmd$ cat /etc/passwd | tail
+nm-openvpn:x:126:133:NetworkManager OpenVPN,,,:/var/lib/openvpn/chroot:/usr/sbin/nologin
+systemd-coredump:x:999:999:systemd Core Dumper:/:/usr/sbin/nologin
+fwupd-refresh:x:127:134:fwupd-refresh user,,,:/run/systemd:/usr/sbin/nologin
+systemd-oom:x:128:136:systemd Userspace OOM Killer,,,:/run/systemd:/usr/sbin/nologin
+sssd:x:129:138:SSSD system user,,,:/var/lib/sss:/usr/sbin/nologin
+_flatpak:x:130:139:Flatpak system-wide installation helper,,,:/nonexistent:/usr/sbin/nologin
+dhcpcd:x:131:65534:DHCP Client Daemon,,,:/usr/lib/dhcpcd:/bin/false
+cups-browsed:x:132:116::/nonexistent:/usr/sbin/nologin
+gnome-remote-desktop:x:997:997:GNOME Remote Desktop:/var/lib/gnome-remote-desktop:/usr/sbin/nologin
+polkitd:x:996:996:User for polkitd:/:/usr/sbin/nologin
+jyoti@jyoti-ThinkPad-T430:~/code/python2os/linux_cmd$ cut -d ":" -f 1  /etc/passwd | tail
+nm-openvpn
+systemd-coredump
+fwupd-refresh
+systemd-oom
+sssd
+_flatpak
+dhcpcd
+cups-browsed
+gnome-remote-desktop
+polkitd
