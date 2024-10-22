@@ -1,0 +1,1 @@
+cat spider.txt | tr ' ' '\n' | sort | uniq -c | sort -nr | head
